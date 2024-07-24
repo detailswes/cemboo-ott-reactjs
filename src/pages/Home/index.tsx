@@ -3,7 +3,7 @@ import MovieCategory from "../../components/movie-category";
 import HeroSlider from "../../components/hero-slider";
 import NavBar from "../../components/vertical-navbar";
 
-const movieCategories = [
+const movieCategories: string[] = [
     'Latest',
     'Adventure',
     'Sci-Fi',

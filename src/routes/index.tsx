@@ -1,7 +1,13 @@
+import React from "react";
 import Home from "./../pages/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-const routes = [{ path: "/", element: <Home /> }];
+interface RouteConfig {
+    path: string;
+    element: JSX.Element;
+}
+
+const routes: RouteConfig[] = [{ path: "/", element: <Home /> }];
 
 function RouteContainer(): JSX.Element {
     return (

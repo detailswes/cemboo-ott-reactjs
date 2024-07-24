@@ -5,7 +5,6 @@ import useGetMovies from "../hooks/useGetMovies";
 import MarvelVideo from "../assets/videos/marvel.mp4";
 
 const LatestMovies = ({type = "" as string}) => {
-    console.log(type)
     const [showModal, setShowModal] = React.useState(false);
     const { getMovieByCategory } = useGetMovies();
 
@@ -81,7 +80,7 @@ const LatestMovies = ({type = "" as string}) => {
                         className="z-10 hover:scale-110 outline-none relative group transition-all h-full rounded-[5px] overflow-hidden video-card cursor-pointer"
                     >
                         <img
-                            src={item.thumbnail_horizontal}
+                            src={item?.thumbnail_horizontal}
                             className="w-full h-full object-cover group-hover:opacity-0 transition-opacity duration-500 ease-in-out"
                             alt={`Slide ${index}`}
                         />

@@ -24,8 +24,8 @@ export default function HeroSlider() {
             {movies.map((movie: Movie) => (
                 <div className="relative h-[45vh] md:h-[70vh]" key={movie.id}>
                     <img
-                         src={movie.thumbnail_vertical}
-                        alt={movie.title}
+                         src={movie?.thumbnail_vertical}
+                        alt={movie?.title}
                         className="cover w-full h-full object-cover"
                     />
                     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#000] to-transparent flex flex-col justify-end items-start ps-4 pb-4 md:ps-20 md:pb-20">
@@ -35,19 +35,19 @@ export default function HeroSlider() {
                             alt="furious"
                         /> */}
                         <h1 className="text-4xl font-semibold">
-                            {movie.title}
+                            {movie?.title}
                         </h1>
                         <p className="mt-3 font-semibold">
-                            {movie.release_year}
+                            {movie?.release_year}
                         </p>
                         <p className="mt-2 text-xs">
-                            {formatDuration(movie.duration_minutes)}
+                            {formatDuration(movie?.duration_minutes)}
                         </p>
                         <p className="text-sm font-normal mt-4 max-w-96">
-                            {movie.synopsis}
+                            {movie?.synopsis}
                         </p>
                         <p className="mt-4">
-                            {formatGenres(movie.genre)}
+                            {formatGenres(movie?.genre)}
                         </p>
                         <div className="flex mt-4 gap-4">
                             <button className="min-w-56 bg-[#ffffff21] text-white hover:scale-110 text-sm transition-transform h-10 rounded-md">
